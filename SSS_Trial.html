@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Header Design</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #000;
+        color: #fff;
+        padding: 10px 20px;
+        font-family: Arial, sans-serif;
+      }
+      .left-section {
+        display: flex;
+        align-items: center;
+      }
+      .logo {
+        margin-right: 10px;
+      }
+      .separator {
+        width: 1px;
+        height: 24px;
+        background-color: #fff;
+        margin-right: 10px;
+      }
+      .sales-hub {
+        display: flex;
+        align-items: center;
+      }
+      .sales-hub span {
+        margin-left: 5px;
+        background-color: #333;
+        padding: 5px 10px;
+        border-radius: 4px;
+      }
+      .right-section {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+      .person,
+      .help-center,
+      .settings,
+      .menu {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      svg {
+        width: 30px;
+        height: 30px;
+        fill: white;
+      }
+      .icon-small svg {
+        width: 20px;
+        height: 20px;
+      }
+      .nav-section {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        background-color: #f4f4f4;
+        padding: 15px 0;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+      }
+      
+      .content {
+        display: flex;
+        height: calc(100vh - 120px);
+      }
+      .left-column {
+        flex: 2;
+        background-color: #e0e0e0;
+        padding: 20px;
+      }
+      .middle-column {
+        flex: 6;
+        background-color: #fff;
+        padding: 20px;
+      }
+      .right-column {
+        flex: 2;
+        background-color: #e0e0e0;
+        padding: 20px;
+      }
+      .search-section {
+        margin-bottom: 20px;
+      }
+      .search-section label {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        margin-bottom: 5px;
+        position: relative;
+        gap: 5px; /* Add spacing between text and icon */
+      }
+
+      .search-section label svg {
+        width: 16px;
+        height: 16px;
+        fill: #333;
+        cursor: pointer;
+      }
+
+      .tooltip {
+        display: none;
+        position: absolute;
+        background-color: #333;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-size: 12px;
+        top: 50%;
+        left: calc(
+          100% + 5px
+        ); /* Positioned to the right of the icon with a 5px gap */
+        z-index: 10;
+        white-space: nowrap;
+        transform: translateY(
+          -50%
+        ); /* Center the tooltip vertically relative to the icon */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      }
+      .search-section label:hover .tooltip {
+        display: block;
+      }
+      .search-section input {
+        width: 95%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="left-section">
+        <div class="logo">
+          <svg viewBox="0 0 64 64">
+            <g>
+              <circle cx="32" cy="32" r="30"></circle>
+            </g>
+          </svg>
+        </div>
+        <div class="separator"></div>
+        <div class="sales-hub">Sales Hub<span>Production</span></div>
+      </div>
+      <div class="right-section">
+        <div class="person icon-small">
+          <svg viewBox="0 0 64 64">
+            <g>
+              <circle cx="32" cy="24" r="12"></circle>
+              <rect x="16" y="40" width="32" height="16"></rect>
+            </g>
+          </svg>
+          Rahul
+        </div>
+        <div class="help-center">Help Center</div>
+        <div class="settings icon-small">
+          <svg viewBox="0 0 64 64">
+            <g>
+              <circle cx="32" cy="32" r="28"></circle>
+              <circle cx="32" cy="32" r="10"></circle>
+            </g>
+          </svg>
+          Settings
+        </div>
+        <div class="menu icon-small">
+          <svg viewBox="0 0 64 64">
+            <g>
+              <rect x="12" y="20" width="40" height="8"></rect>
+              <rect x="12" y="36" width="40" height="8"></rect>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="nav-section">
+      <div>Home</div>
+      <div>Information Pages</div>
+      <div>Sales Library</div>
+      <div>Information Builder</div>
+      <div>PFR Hub</div>
+    </div>
+    <div class="content">
+      <div class="left-column">
+        <div class="search-section">
+          <label for="search-records">Sales Library Quick Search</label>
+          <input
+            type="text"
+            id="search-records"
+            placeholder="Search for records by ID or keyword"
+          />
+        </div>
+        <div class="search-section">
+          <label for="recent-downloads"
+            >Recent Downloads
+            <svg viewBox="0 0 24 24">
+              <g>
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="black"
+                  stroke-width="2"
+                  fill="none"
+                />
+                <text
+                  x="12"
+                  y="16"
+                  font-size="12"
+                  text-anchor="middle"
+                  fill="black"
+                >
+                  i
+                </text>
+              </g>
+            </svg>
+            <span class="tooltip"
+              >Displays 10 documents that you have recently downloaded</span
+            >
+          </label>
+          <input
+            type="text"
+            id="recent-downloads"
+            placeholder="Displays documents you have downloaded"
+          />
+        </div>    
+        <div class="search-section">
+          <label for="favourites"
+            >Favourites
+            <svg viewBox="0 0 24 24">
+              <g>
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="black"
+                  stroke-width="2"
+                  fill="none"
+                />
+                <text
+                  x="12"
+                  y="16"
+                  font-size="12"
+                  text-anchor="middle"
+                  fill="black"
+                >
+                  i
+                </text>
+              </g>
+            </svg>
+            <span class="tooltip">Displays 10 documents in My Favourites</span>
+          </label>
+          <input
+            type="text"
+            id="favourites"
+            placeholder="Displays documents added to My Favourites"
+          />
+        </div>
+      </div>
+      <div class="middle-column">Middle Column</div>
+      <div class="right-column">Right Column</div>
+    </div>
+  </body>
+</html>

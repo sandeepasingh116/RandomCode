@@ -204,6 +204,32 @@
     max-width: 100%; /* Ensures the image is responsive */
     border-radius: 8px; /* Optional: Adds rounded corners */
 }
+.centered-heading {
+  text-align: center; /* Centers the heading */
+  margin-top: 20px; /* Adds space between the image and the heading */
+}
+
+.clickable-link {
+  font-size: 18px;
+  color: #007BFF; /* Blue color for the link */
+  text-decoration: none; /* Removes the underline */
+  font-weight: bold;
+}
+
+.clickable-link:hover {
+  text-decoration: underline; /* Adds an underline when hovered */
+}
+
+.simple-heading {
+  text-align: center; /* Centers the heading */
+  margin-top: 10px; /* Adds space between the clickable link and the heading */
+}
+
+.simple-heading h3 {
+  font-size: 20px;
+  font-weight: normal; /* Simple, non-bold heading */
+  color: #333; /* Dark text color for the heading */
+}
 
 
     </style>
@@ -351,8 +377,16 @@
             <img src="https://via.placeholder.com/800x400" alt="Placeholder Image" class="sub-section-image">
             <div class="additional-image-wrapper">
               <img src="https://via.placeholder.com/800x400" alt="Centered Image" class="additional-image">
-          </div>
-          
+            </div>
+            <div class="centered-heading">
+              <a href="#" class="clickable-link">Click Here</a>
+            </div>
+            <div class="centered-heading">
+              <a href="#" class="clickable-link">Click Here</a>
+            </div>
+            <div class="simple-heading">
+              <h3>Simple Heading Below Link</h3>
+            </div>
         </div>
     </div>
       <div class="right-column">Right Column</div>

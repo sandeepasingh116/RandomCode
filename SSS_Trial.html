@@ -230,8 +230,72 @@
   font-weight: normal; /* Simple, non-bold heading */
   color: #333; /* Dark text color for the heading */
 }
+.table-container {
+  width: 100%; /* Full width of the container */
+  margin-top: 20px;
+}
 
+table {
+  width: 100%; /* Table takes the full width of the container */
+  border-collapse: collapse; /* Ensures borders between cells are merged */
+}
 
+td {
+  padding: 10px;
+  border: 1px solid #ccc; /* Border for the cells */
+  text-align: center; /* Centers the text in the cells */
+}
+
+.blue-bold-text {
+  color: blue; /* Blue text color */
+  font-weight: bold; /* Bold text */
+}
+.underlined-link {
+  text-decoration: underline;
+  color: blue; /* Blue color for the links */
+}
+td:first-child {
+  text-align: left; /* Left-align content of the first column */
+}
+
+td:first-child ul {
+  padding-left: 20px; /* Adds some space from the left side */
+}
+.subheading {
+  color: black;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-decoration: underline;
+  text-align: left;
+  
+}
+td:nth-child(1) {
+  text-align: left; /* Left-align content */
+  vertical-align: top; /* Align content to the top */
+}
+/* Ensure the list items in column 2 are left-aligned */
+td:nth-child(2) ul {
+  padding-left: 20px;
+  text-align: left;
+}
+td:nth-child(3) {
+  text-align: left; /* Left-align content */
+  vertical-align: top; /* Align content to the top */
+}
+
+td:nth-child(3) ul {
+  padding-left: 20px;
+  margin-top: 10px; /* Add some spacing after the subheading */
+}
+td:nth-child(4) {
+  text-align: left; /* Left-align content */
+  vertical-align: top; /* Align content to the top */
+}
+td:nth-child(4) ul {
+  padding-left: 20px;
+  text-align: left; /* Left-align the list items */
+  
+}
     </style>
   </head>
   <body>
@@ -387,6 +451,50 @@
             <div class="simple-heading">
               <h3>Simple Heading Below Link</h3>
             </div>
+            <div class="table-container">
+              <table>
+                <!-- First Row with 4 columns, merging column 2 and column 3 -->
+                <tr>
+                  <td class="blue-bold-text">Heading 1</td>
+                  <td class="blue-bold-text" colspan="2">Heading 2 & 3</td>
+                  <td class="blue-bold-text">Heading 4</td>
+                </tr>
+                
+                <!-- Second Row with 4 columns -->
+                <tr>
+                  <td>
+                    <ul>
+                      <li><a href="#" class="underlined-link">Link 1</a></li>
+                      <li><a href="#" class="underlined-link">Link 2</a></li>
+                      <li><a href="#" class="underlined-link">Link 3</a></li>
+                    </ul>
+                  </td>
+                  <td>
+                    <div class="subheading">Subheading 2</div>
+                    <ul>
+                      <li><a href="#" class="underlined-link">Link A</a></li>
+                      <li><a href="#" class="underlined-link">Link B</a></li>
+                      <li><a href="#" class="underlined-link">Link C</a></li>
+                      <li><a href="#" class="underlined-link">Link D</a></li>
+                    </ul>
+                  </td>
+                  <td>
+                    <div class="subheading">Important Text</div>
+                    <ul>
+                      <li>Point 1</li>
+                      <li>Point 2</li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul>
+                      <li><a href="#" class="underlined-link">Final Link 1</a></li>
+                      <li><a href="#" class="underlined-link">Final Link 2</a></li>
+                    </ul>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            
         </div>
     </div>
       <div class="right-column">Right Column</div>

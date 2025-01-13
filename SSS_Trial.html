@@ -191,6 +191,21 @@
             margin-bottom: 10px;
             text-align: left;
         }
+        .spacer {
+    height: 20px; /* Adjust this value for desired spacing */
+}
+.additional-image-wrapper {
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+    margin-top: 20px; /* Adds space above the new image */
+}
+
+.additional-image {
+    max-width: 100%; /* Ensures the image is responsive */
+    border-radius: 8px; /* Optional: Adds rounded corners */
+}
+
+
     </style>
   </head>
   <body>
@@ -331,6 +346,13 @@
             <p>Content for the overview section goes here.</p>
             <div class="sub-section-heading-alt">Details</div>
             <img src="https://via.placeholder.com/800x400" alt="Placeholder Image" class="sub-section-image">
+            <div class="spacer"></div>
+            <div class="sub-section-heading-alt">Details</div>
+            <img src="https://via.placeholder.com/800x400" alt="Placeholder Image" class="sub-section-image">
+            <div class="additional-image-wrapper">
+              <img src="https://via.placeholder.com/800x400" alt="Centered Image" class="additional-image">
+          </div>
+          
         </div>
     </div>
       <div class="right-column">Right Column</div>

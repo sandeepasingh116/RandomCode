@@ -141,6 +141,25 @@
         border: 1px solid #ccc;
         border-radius: 4px;
       }
+      .input-with-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-with-icon input {
+    flex: 1;
+    padding-right: 30px; /* Adds space for the icon */
+}
+
+.input-with-icon svg {
+    position: absolute;
+    right: 10px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    fill: #333;
+}
     </style>
   </head>
   <body>
@@ -197,11 +216,15 @@
       <div class="left-column">
         <div class="search-section">
           <label for="search-records">Sales Library Quick Search</label>
-          <input
-            type="text"
-            id="search-records"
-            placeholder="Search for records by ID or keyword"
-          />
+          <div class="input-with-icon">
+            <input type="text" id="search-records" placeholder="Search for records by ID or keyword">
+            <svg viewBox="0 0 24 24">
+                <g>
+                    <circle cx="12" cy="12" r="10" stroke="black" stroke-width="2" fill="none"/>
+                    <text x="12" y="16" font-size="12" text-anchor="middle" fill="black">i</text>
+                </g>
+            </svg>
+        </div>
         </div>
         <div class="search-section">
           <label for="recent-downloads"
